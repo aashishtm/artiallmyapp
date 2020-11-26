@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/ui/components/formcomponent/formcomponent.dart';
-import 'package:my_app/ui/components/registerform.dart';
+import 'package:my_app/ui/components/loginform.dart';
 
-class LoginForm extends StatelessWidget {
+class RegisterForm extends StatelessWidget {
   FormComponent loginForm = new FormComponent();
 
   @override
@@ -12,6 +12,10 @@ class LoginForm extends StatelessWidget {
       margin: EdgeInsets.fromLTRB(50, 0, 50, 25),
       child: Column(
         children: [
+          loginForm.nameView(),
+          SizedBox(
+            height: 20,
+          ),
           loginForm.emailView(),
           SizedBox(
             height: 20,
@@ -40,30 +44,7 @@ class LoginForm extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Forgot your password?',
-              ),
-              SizedBox(
-                width: 5.0,
-              ),
-              InkWell(
-                onTap: () => {},
-                child: Text(
-                  'click here',
-                  style: TextStyle(
-                    color: Colors.blue,
-                  ),
-                ),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 10.0,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'Not Registered?',
+                'Already a user?',
               ),
               SizedBox(
                 width: 5.0,
@@ -72,11 +53,11 @@ class LoginForm extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => RegisterForm()),
+                    MaterialPageRoute(builder: (context) => LoginForm()),
                   );
                 },
                 child: Text(
-                  'register here',
+                  'click here',
                   style: TextStyle(
                     color: Colors.blue,
                   ),

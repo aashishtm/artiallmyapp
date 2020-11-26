@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/ui/components/loginform.dart';
 import 'package:my_app/ui/components/logo.dart';
+import 'package:my_app/ui/components/registerform.dart';
 
 class Portfolio extends StatelessWidget {
   @override
@@ -15,7 +16,7 @@ class Portfolio extends StatelessWidget {
             SizedBox(
               height: 25,
             ),
-            LoginForm(),
+            RegisterForm(),
           ],
         ),
       ),
