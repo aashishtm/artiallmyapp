@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/ui/components/loginform.dart';
+import 'package:my_app/ui/components/logo.dart';
 
 class Portfolio extends StatelessWidget {
   @override
@@ -6,52 +8,16 @@ class Portfolio extends StatelessWidget {
     return Scaffold(
       body: Container(
         alignment: Alignment.center,
-        child: Stack(
-          alignment: Alignment.topCenter,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _getCard(),
-            _getAvatar(),
+            LogoBig(),
+            SizedBox(
+              height: 25,
+            ),
+            LoginForm(),
           ],
         ),
-      ),
-    );
-  }
-
- Container _getCard() {
-    return Container(
-      height: 200,
-      width: 300,
-      margin: EdgeInsets.all(60),
-      alignment: Alignment.center,
-      decoration: BoxDecoration(
-        border: Border.all(color: Colors.white),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            "Aashish Thapa Magar",
-          ),
-          Text(
-            "Aashish Thapa Magar",
-          ),
-          Text(
-            "Aashish Thapa Magar",
-          ),
-        ],
-      ),
-    );
- }
-
-  Container _getAvatar() {
-    return Container(
-      alignment: Alignment.center,
-      height: 100,
-      width: 100,
-      decoration: BoxDecoration(
-        border: Border.all(color: Colors.blue),
-        borderRadius: BorderRadius.circular(50),
-        color: Colors.white,
       ),
     );
   }
