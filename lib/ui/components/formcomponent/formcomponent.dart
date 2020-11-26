@@ -18,4 +18,9 @@ class FormComponent {
       decoration: InputDecoration(labelText: "Password"),
     );
   }
+  TextFormField secretCodeView() {
+    return TextFormField(
+      decoration: InputDecoration(labelText: "Secret Code"),
+    );
+  }
 }

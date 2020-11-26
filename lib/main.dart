@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Artiall',
       theme: ThemeData.dark(),
-      home: Portfolio(),
+      home: Portfolio(loadForm: "register"),
     );
   }
 }

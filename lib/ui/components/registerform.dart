@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/ui/components/formcomponent/formcomponent.dart';
-import 'package:my_app/ui/components/loginform.dart';
+import 'package:my_app/ui/portfolio.dart';
 
+// ignore: must_be_immutable
 class RegisterForm extends StatelessWidget {
   FormComponent loginForm = new FormComponent();
 
@@ -31,7 +32,7 @@ class RegisterForm extends StatelessWidget {
               borderRadius: BorderRadius.circular(20.0),
             ),
             child: Text(
-              'Login',
+              'Register',
               style: TextStyle(
                 fontSize: 18.0,
               ),
@@ -53,7 +54,7 @@ class RegisterForm extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => LoginForm()),
+                    MaterialPageRoute(builder: (context) => Portfolio(loadForm: "login",)),
                   );
                 },
                 child: Text(

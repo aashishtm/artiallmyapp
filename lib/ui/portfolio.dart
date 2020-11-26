@@ -4,6 +4,15 @@ import 'package:my_app/ui/components/logo.dart';
 import 'package:my_app/ui/components/registerform.dart';
 
 class Portfolio extends StatelessWidget {
+  final String loadForm;
+  Portfolio({this.loadForm});
+  Widget LoadForm(){
+    if(loadForm == "register"){
+      return RegisterForm();
+    } else {
+      return LoginForm();
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +25,7 @@ class Portfolio extends StatelessWidget {
             SizedBox(
               height: 25,
             ),
-            RegisterForm(),
+            LoadForm(),
           ],
         ),
       ),
