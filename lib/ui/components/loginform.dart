@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/ui/components/formcomponent/formcomponent.dart';
-import 'package:my_app/ui/portfolio.dart';
+import 'package:my_app/ui/load.dart';
+import 'package:my_app/ui/pages/homepage.dart';
 
 // ignore: must_be_immutable
 class LoginForm extends StatelessWidget {
@@ -22,7 +23,14 @@ class LoginForm extends StatelessWidget {
             height: 25,
           ),
           RaisedButton(
-            onPressed: () => {},
+            onPressed: () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomePage(),
+                ),
+              ),
+            },
             elevation: 5.0,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20.0),
@@ -73,7 +81,10 @@ class LoginForm extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Portfolio(loadForm: "register",)),
+                    MaterialPageRoute(
+                        builder: (context) => Portfolio(
+                              loadForm: "register",
+                            )),
                   );
                 },
                 child: Text(

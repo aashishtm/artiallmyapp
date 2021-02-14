@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/ui/components/formcomponent/formcomponent.dart';
-import 'package:my_app/ui/portfolio.dart';
+import 'package:my_app/ui/load.dart';
 
 // ignore: must_be_immutable
 class RegisterForm extends StatelessWidget {
